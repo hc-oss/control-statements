@@ -5,6 +5,39 @@ There's no built-in looping and conditional syntax in React. This library adds t
 
 Fork of [react control statements](https://www.npmjs.com/package/react-control-statements) but with `<React.Fragment/>` implementation
 
+## Free Advise
+
+If you are coming from non-jsx background you might think this package is a good start but in reality 🤫 *this package is not needed at all.*
+
+because, it's easy to replicate this scenarios with pure ES6+, I'm putting some examples that might help you for getting started.
+
+### Pure React Conditional Statements
+[![Edit SimpleConditionalStatements](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/peaceful-bhaskara-q35fy?fontsize=14)
+```jsx
+import React from "react";
+
+export default function PureReactExamples() {
+  const foo = true;
+  const fruits = ["🍇 Grapes", "🍈 Melon", "🍌 Banana"];
+  return (
+    <>
+      <h1>Simple If without Else</h1>
+      {foo && <p>Yay, Foo is true</p>}
+
+      <h1>Simple If with Else</h1>
+      {foo ? <p>Yay, Foo is true</p> : <p>Whoa, Foo is false</p>}
+
+      <h1>Loop Example</h1>
+      {fruits.map((fruitName, index) => (
+        <p key={index}>{fruitName}</p>
+      ))}
+    </>
+  );
+}
+```
+
+---
+
 ## Install
 
 ```
